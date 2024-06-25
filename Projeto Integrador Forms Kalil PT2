@@ -1,0 +1,20 @@
+Tabela Cadastro
+UsuarioID: Inteiro, Auto Incremento
+Nome: Varchar, 255 caracteres
+Senha: Varchar, 255 caracteres
+
+Tabela Pergunta
+PerguntaID: Inteiro, Auto Incremento
+TextoPergunta: Varchar, 500 caracteres
+
+Tabela Resposta
+RespostaID: Inteiro, Auto Incremento
+PerguntaID: Inteiro, Chave Estrangeira referenciando Pergunta(PerguntaID)
+TextoResposta: Varchar, 500 caracteres
+Correta: Booleano
+
+Tabela Feedback
+FeedbackID: Inteiro, Auto Incremento
+UsuarioID: Inteiro, Chave Estrangeira referenciando Cadastro(UsuarioID)
+Acertos: Inteiro
+Erros: Inteiro
